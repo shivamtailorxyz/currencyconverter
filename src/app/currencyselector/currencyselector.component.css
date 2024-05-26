@@ -1,0 +1,35 @@
+.currency_main{
+    margin-top: 20px;
+    display: flex;
+    display: flex;
+    justify-content: center;
+}
+.currency_main div{
+    margin: 20px;
+    transform: translate(0,-9px);
+}
+.input_fildes{
+    display: flex;
+    justify-content: center;
+}
+.input_fildes h1{
+    margin: 20px;
+    transform: translate(0,-9px);
+}
+
+@media (max-width : 700px){
+    .currency_main{
+        display: grid;
+    }
+    .currency_main div{
+        margin: 5px;
+        text-align: center;
+    }
+    .input_fildes{
+        display: grid;
+    }
+    .input_fildes h1{
+        margin: 5px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,36 @@
+<div class="currency_main">
+
+<mat-form-field style="width: 300px;">
+    <mat-label>Currency</mat-label>
+    <mat-select value="inr" #firstvalue>
+      @for (value of currencydata; track value) {
+        <mat-option [value]="value[0]">{{value[1]}}</mat-option>
+      }
+ </mat-select>
+</mat-form-field>
+<div>
+    <h1>To</h1>
+</div>
+<mat-form-field style="width: 300px;">
+    <mat-label>Currency</mat-label>
+    <mat-select value="usd" #secondvalue >
+      @for (value of currencydata; track value) {
+        <mat-option [value]="value[0]">{{value[1]}}</mat-option>
+      }
+ </mat-select>
+</mat-form-field>
+</div>
+<div class="input_fildes">
+  <mat-form-field style="width: 300px;" class="example-full-width">
+    <mat-label>Amount</mat-label>
+    <input #amount type="number" (input)="calculate(firstvalue.value,secondvalue.value,amount.value)" matInput>
+  </mat-form-field>
+  <h1>=</h1>
+  <mat-form-field style="width: 300px;" class="example-full-width">
+    <mat-label>Amount</mat-label>
+    <input matInput [value]="convertedvalue" style="color: #000;" disabled="true">
+  </mat-form-field>
+</div>
+<div class="btn">
+
+</div>
